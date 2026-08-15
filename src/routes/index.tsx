@@ -45,11 +45,10 @@ function Index() {
         </p>
 
         <a
-          // Placeholder email address — replace with real contact address before launch
-          href="mailto:hello@truegauge.ai"
+          href="mailto:hello@truegaugeai.co.za"
           className="mt-6 inline-flex h-11 items-center rounded-md bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-teal-deep"
         >
-          hello@truegauge.ai
+          hello@truegaugeai.co.za
         </a>
       </div>
 
