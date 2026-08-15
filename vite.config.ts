@@ -16,8 +16,8 @@ export default defineConfig({
     // nitro/vite builds from this
     ...(staticExport ? {} : { server: { entry: "server" } }),
     ...(staticExport
-      ? { prerender: { enabled: true, crawlLinks: true }, spa: { enabled: true } }
+      ? { prerender: { enabled: true, crawlLinks: true } }
       : {}),
   },
-  ...(staticExport ? { nitro: { preset: "static" as const } } : {}),
+  ...(staticExport ? { nitro: false as const } : {}),
 });
