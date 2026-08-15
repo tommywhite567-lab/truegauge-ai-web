@@ -14,10 +14,10 @@ export default defineConfig({
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
-    server: { entry: "server" },
+    ...(staticExport ? {} : { server: { entry: "server" } }),
     ...(staticExport
       ? { prerender: { enabled: true, crawlLinks: true }, spa: { enabled: true } }
       : {}),
   },
-  ...(staticExport ? { nitro: false as const } : {}),
+  ...(staticExport ? { nitro: { preset: "static" as const } } : {}),
 });
