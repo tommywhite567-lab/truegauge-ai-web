@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, Check, Gauge, LineChart, Workflow, ShieldCheck, Plug, Bot } from "lucide-react";
+import { ArrowRight, Check, Gauge, LineChart, ShieldCheck, Inbox, PenLine, CalendarClock, BookOpen } from "lucide-react";
 import heroImage from "@/assets/gauge-hero.jpg";
 import { GaugeMark } from "@/components/site/GaugeMark";
 
@@ -25,34 +25,34 @@ export const Route = createFileRoute("/")({
 
 const services = [
   {
-    icon: Workflow,
-    title: "Workflow Automation",
-    body: "Map the process, remove the handoffs, and automate the repeat work across the tools your team already uses.",
+    icon: Inbox,
+    title: "Intake & Structuring",
+    body: "Turn messy emails, forms, and documents into clean, structured records — automatically, without re-typing anything.",
   },
   {
-    icon: Bot,
-    title: "AI Agents & Assistants",
-    body: "Internal assistants and customer-facing agents grounded in your own documentation, data and rules.",
-  },
-  {
-    icon: Plug,
-    title: "Systems Integration",
-    body: "Connect CRM, ERP, finance and support platforms so data moves once, correctly, without re-capture.",
+    icon: PenLine,
+    title: "Response Drafting",
+    body: "Draft replies to routine queries — order status, FAQs, follow-ups — ready for your team to review and send.",
   },
   {
     icon: LineChart,
-    title: "Data & Reporting",
-    body: "Clean pipelines and dashboards that tell you what changed, by how much, and where the next gain sits.",
+    title: "Reporting & Summarisation",
+    body: "Recurring reports and weekly digests, pulled and written automatically so no one's assembling spreadsheets by hand.",
+  },
+  {
+    icon: CalendarClock,
+    title: "Scheduling & Status Updates",
+    body: "Automatic confirmations, reminders, and status notifications — so your team isn't chasing or repeating themselves.",
+  },
+  {
+    icon: BookOpen,
+    title: "Knowledge Capture",
+    body: "Turn what's in your team's heads into written procedures and FAQs, without anyone having to sit down and write a manual.",
   },
   {
     icon: ShieldCheck,
-    title: "Governance & POPIA",
-    body: "Access control, audit trails and data handling aligned to South African compliance expectations.",
-  },
-  {
-    icon: Gauge,
-    title: "Automation Audit",
-    body: "A calibrated read of where time and margin leak, scored by effort, risk and return before you commit.",
+    title: "Data Reconciliation",
+    body: "Automated checks that flag mismatches and inconsistencies across your records — built to catch what's easy to miss, not to replace a full audit.",
   },
 ];
 
