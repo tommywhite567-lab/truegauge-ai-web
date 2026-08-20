@@ -45,10 +45,10 @@ function Index() {
         </p>
 
         <a
-          href="mailto:hello@trueguage-ai.co.za"
-          className="mt-6 inline-flex h-11 items-center rounded-md bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-blue-deep"
+          href="mailto:hello@truegaugeai.co.za"
+          className="mt-6 inline-flex h-11 items-center rounded-md bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-teal-deep"
         >
-          hello@trueguage-ai.co.za
+          hello@truegaugeai.co.za
         </a>
       </div>
 
