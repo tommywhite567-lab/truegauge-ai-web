@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Check, Gauge, LineChart, ShieldCheck, Inbox, PenLine, CalendarClock, BookOpen } from "lucide-react";
 import heroImage from "@/assets/gauge-hero.jpg";
 import { GaugeMark } from "@/components/site/GaugeMark";
