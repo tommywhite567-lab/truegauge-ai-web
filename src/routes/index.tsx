@@ -85,6 +85,13 @@ function Index() {
             <a href="#services" className="transition-colors hover:text-foreground">Services</a>
             <a href="#approach" className="transition-colors hover:text-foreground">Approach</a>
             <a href="#results" className="transition-colors hover:text-foreground">Results</a>
+            <Link
+              to="/measure"
+              activeProps={{ className: "text-foreground font-medium" }}
+              className="transition-colors hover:text-foreground"
+            >
+              Measure
+            </Link>
             <a href="#contact" className="transition-colors hover:text-foreground">Contact</a>
           </nav>
           <a
