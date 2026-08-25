@@ -12,10 +12,23 @@ import {
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 
-const navLinks = [
-  { to: "/", hash: "services" as const, label: "Services" },
-  { to: "/", hash: "approach" as const, label: "Approach" },
-  { to: "/", hash: "results" as const, label: "Results" },
+interface HashLink {
+  to: "/";
+  hash: string;
+  label: string;
+}
+
+interface RouteLink {
+  to: "/measure";
+  label: string;
+}
+
+type NavLink = HashLink | RouteLink;
+
+const navLinks: NavLink[] = [
+  { to: "/", hash: "services", label: "Services" },
+  { to: "/", hash: "approach", label: "Approach" },
+  { to: "/", hash: "results", label: "Results" },
   { to: "/measure", label: "Measure" },
 ];
 
@@ -88,17 +101,21 @@ export function SiteHeader({ className }: { className?: string }) {
             </SheetTrigger>
             <SheetContent side="right" className="w-[280px] bg-background">
               <div className="flex flex-col gap-6 pt-8">
-                {navLinks.map((link) => (
-                  <SheetClose asChild key={link.label}>
-                    <Link
-                      to={link.to}
-                      hash={"hash" in link ? link.hash : undefined}
-                      className="text-lg font-medium text-foreground transition-colors hover:text-primary"
-                    >
-                      {link.label}
-                    </Link>
-                  </SheetClose>
-                ))}
+                {navLinks.map((link) => {
+                  const hashProp =
+                    link.to === "/" ? { hash: link.hash } : {};
+                  return (
+                    <SheetClose asChild key={link.label}>
+                      <Link
+                        to={link.to}
+                        {...hashProp}
+                        className="text-lg font-medium text-foreground transition-colors hover:text-primary"
+                      >
+                        {link.label}
+                      </Link>
+                    </SheetClose>
+                  );
+                })}
                 <SheetClose asChild>
                   <Link
                     to="/"
