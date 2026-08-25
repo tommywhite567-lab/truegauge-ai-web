@@ -264,10 +264,10 @@ function Index() {
                   <ArrowRight className="h-4 w-4" />
                 </a>
                 <a
-                  href="tel:+27100000000"
+                  href="tel:+27832050567"
                   className="inline-flex h-12 items-center rounded-md border border-primary-foreground/25 px-6 text-sm font-medium transition-colors hover:border-primary-foreground/50"
                 >
-                  +27 10 000 0000
+                  +27 83 205 0567
                 </a>
               </div>
             </div>
