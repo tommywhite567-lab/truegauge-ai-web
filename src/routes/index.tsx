@@ -257,10 +257,10 @@ function Index() {
               </p>
               <div className="mt-9 flex flex-wrap gap-3">
                 <a
-                  href="mailto:hello@truegauge.ai"
+                  href="mailto:hello@truegauge-ai.co.za"
                   className="inline-flex h-12 items-center gap-2 rounded-md bg-accent px-6 text-sm font-semibold text-accent-foreground transition-colors hover:bg-teal"
                 >
-                  hello@truegauge.ai
+                  hello@truegauge-ai.co.za
                   <ArrowRight className="h-4 w-4" />
                 </a>
                 <a
