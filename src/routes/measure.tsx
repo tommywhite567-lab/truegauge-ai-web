@@ -394,7 +394,7 @@ function MeasurePage() {
             <GaugeMark className="h-5 w-5 text-primary" />
             <span className="font-display font-semibold text-foreground">Truegauge AI</span>
           </div>
-          <p>Johannesburg, South Africa · © {new Date().getFullYear()} Truegauge AI</p>
+          <p>Cape Town, South Africa · © {new Date().getFullYear()} Truegauge AI</p>
         </div>
       </footer>
     </div>
