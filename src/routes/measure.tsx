@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Gauge } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { GaugeMark } from "@/components/site/GaugeMark";
+import { SiteHeader } from "@/components/site/SiteHeader";
 
 export const Route = createFileRoute("/measure")({
   head: () => ({
@@ -246,44 +247,7 @@ function MeasurePage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="sticky top-0 z-40 border-b border-border/70 bg-background/85 backdrop-blur">
-        <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-          <Link to="/" className="flex items-center gap-2.5">
-            <GaugeMark className="h-7 w-7 text-primary" />
-            <span className="font-display text-[17px] font-semibold tracking-tight">
-              Truegauge<span className="text-primary"> AI</span>
-            </span>
-          </Link>
-          <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
-            <Link to="/" className="transition-colors hover:text-foreground">
-              Home
-            </Link>
-            <Link to="/" hash="services" className="transition-colors hover:text-foreground">
-              Services
-            </Link>
-            <Link to="/" hash="approach" className="transition-colors hover:text-foreground">
-              Approach
-            </Link>
-            <Link to="/" hash="results" className="transition-colors hover:text-foreground">
-              Results
-            </Link>
-            <Link
-              to="/measure"
-              activeProps={{ className: "text-foreground font-medium" }}
-              className="transition-colors hover:text-foreground"
-            >
-              Measure
-            </Link>
-          </nav>
-          <Link
-            to="/"
-            hash="contact"
-            className="inline-flex h-10 items-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground transition-colors hover:bg-teal-deep"
-          >
-            Book an audit
-          </Link>
-        </div>
-      </header>
+      <SiteHeader />
 
       <main className="relative overflow-hidden border-b border-border bg-charcoal text-primary-foreground">
         <div className="dial-ring pointer-events-none absolute -right-40 -top-40 h-[42rem] w-[42rem] opacity-70" />

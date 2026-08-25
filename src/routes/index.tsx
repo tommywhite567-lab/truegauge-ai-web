@@ -1,7 +1,8 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Check, Gauge, LineChart, ShieldCheck, Inbox, PenLine, CalendarClock, BookOpen } from "lucide-react";
+import { createFileRoute } from "@tanstack/react-router";
+import { ArrowRight, Check, LineChart, ShieldCheck, Inbox, PenLine, CalendarClock, BookOpen } from "lucide-react";
 import heroImage from "@/assets/gauge-hero.jpg";
 import { GaugeMark } from "@/components/site/GaugeMark";
+import { SiteHeader } from "@/components/site/SiteHeader";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -73,35 +74,7 @@ const proof = [
 function Index() {
   return (
     <div className="min-h-screen bg-background">
-      <header className="sticky top-0 z-40 border-b border-border/70 bg-background/85 backdrop-blur">
-        <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-          <a href="#top" className="flex items-center gap-2.5">
-            <GaugeMark className="h-7 w-7 text-primary" />
-            <span className="font-display text-[17px] font-semibold tracking-tight">
-              Truegauge<span className="text-primary"> AI</span>
-            </span>
-          </a>
-          <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
-            <a href="#services" className="transition-colors hover:text-foreground">Services</a>
-            <a href="#approach" className="transition-colors hover:text-foreground">Approach</a>
-            <a href="#results" className="transition-colors hover:text-foreground">Results</a>
-            <Link
-              to="/measure"
-              activeProps={{ className: "text-foreground font-medium" }}
-              className="transition-colors hover:text-foreground"
-            >
-              Measure
-            </Link>
-            <a href="#contact" className="transition-colors hover:text-foreground">Contact</a>
-          </nav>
-          <a
-            href="#contact"
-            className="inline-flex h-10 items-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground transition-colors hover:bg-teal-deep"
-          >
-            Book an audit
-          </a>
-        </div>
-      </header>
+      <SiteHeader />
 
       <main id="top">
         {/* Hero */}
