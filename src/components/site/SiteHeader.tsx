@@ -90,15 +90,15 @@ export function SiteHeader({ className }: { className?: string }) {
             Book an audit
           </Link>
 
+          <button
+            onClick={() => setOpen(true)}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border text-foreground transition-colors hover:bg-secondary md:hidden"
+            aria-label="Open menu"
+          >
+            <Menu className="h-5 w-5" />
+          </button>
+
           <Sheet open={open} onOpenChange={setOpen}>
-            <SheetTrigger asChild>
-              <button
-                className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border text-foreground transition-colors hover:bg-secondary md:hidden"
-                aria-label="Open menu"
-              >
-                <Menu className="h-5 w-5" />
-              </button>
-            </SheetTrigger>
             <SheetContent side="right" className="w-[280px] bg-background">
               <div className="flex flex-col gap-6 pt-8">
                 {navLinks.map((link) => {
