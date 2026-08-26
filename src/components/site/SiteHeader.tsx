@@ -7,7 +7,6 @@ import { GaugeMark } from "@/components/site/GaugeMark";
 import {
   Sheet,
   SheetContent,
-  SheetTrigger,
   SheetClose,
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
