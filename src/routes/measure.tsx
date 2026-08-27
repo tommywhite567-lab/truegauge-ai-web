@@ -23,6 +23,9 @@ export const Route = createFileRoute("/measure")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
+  beforeLoad: () => {
+    throw redirect({ to: "/" });
+  },
   component: MeasurePage,
 });
 
