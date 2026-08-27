@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, redirect } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { GaugeMark } from "@/components/site/GaugeMark";
