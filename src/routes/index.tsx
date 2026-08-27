@@ -46,7 +46,7 @@ function Index() {
         </h1>
 
         <p className="mt-6 max-w-lg text-lg leading-relaxed text-primary-foreground/70">
-          A new website is on the way. Truegauge AI helps South African businesses implement
+          Launching Soon. Truegauge AI helps South African businesses implement
           automation and AI workflows that are proven, not promised.
         </p>
 
