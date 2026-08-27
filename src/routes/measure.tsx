@@ -198,16 +198,6 @@ function GaugeDial({
 }
 
 function MeasurePage() {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    navigate({ to: "/" });
-  }, [navigate]);
-
-  return null;
-}
-
-function _MeasurePage() {
   const [selected, setSelected] = useState<Metric>(metrics[0]);
   const [value, setValue] = useState<number>(metrics[0].baseline);
   const [phase, setPhase] = useState<"idle" | "animating" | "done">("idle");
