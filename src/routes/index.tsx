@@ -132,9 +132,8 @@ function Index() {
               </Button>
               <Button
                 asChild
-                variant="outline"
                 size="lg"
-                className="border-primary-foreground/25 text-primary-foreground/90 hover:border-primary-foreground/50 hover:bg-transparent hover:text-primary-foreground"
+                className="bg-accent text-accent-foreground hover:bg-teal"
               >
                 <Link to="/measure">See how we measure</Link>
               </Button>
