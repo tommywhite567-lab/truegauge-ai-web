@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as KarateRouteImport } from './routes/karate'
 import { Route as MeasureRouteImport } from './routes/measure'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KarateRoute = KarateRouteImport.update({
+  id: '/karate',
+  path: '/karate',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MeasureRoute = MeasureRouteImport.update({
@@ -25,27 +31,31 @@ const MeasureRoute = MeasureRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/karate': typeof KarateRoute
   '/measure': typeof MeasureRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/karate': typeof KarateRoute
   '/measure': typeof MeasureRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/karate': typeof KarateRoute
   '/measure': typeof MeasureRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/measure'
+  fullPaths: '/' | '/karate' | '/measure'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/measure'
-  id: '__root__' | '/' | '/measure'
+  to: '/' | '/karate' | '/measure'
+  id: '__root__' | '/' | '/karate' | '/measure'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  KarateRoute: typeof KarateRoute
   MeasureRoute: typeof MeasureRoute
 }
 
@@ -56,6 +66,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/karate': {
+      id: '/karate'
+      path: '/karate'
+      fullPath: '/karate'
+      preLoaderRoute: typeof KarateRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/measure': {
@@ -70,6 +87,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  KarateRoute: KarateRoute,
   MeasureRoute: MeasureRoute,
 }
 export const routeTree = rootRouteImport
