@@ -65,7 +65,13 @@
   --color-teal-deep: var(--teal-deep);
   --color-charcoal: var(--charcoal);
   --color-sand: var(--sand);
+  --color-dojo-ink: var(--dojo-ink);
+  --color-dojo-slate: var(--dojo-slate);
+  --color-dojo-bone: var(--dojo-bone);
+  --color-dojo-crimson: var(--dojo-crimson);
+  --color-dojo-gold: var(--dojo-gold);
 }
+
 
 :root {
   --radius: 0.375rem;
